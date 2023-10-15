@@ -15,8 +15,8 @@ spec:
         app: nodejs-webapp
     spec:
       containers:
-      - name: nodejs-container895072465878.dkr.ecr.us-east-1.amazonaws.com/devops-nodejs:1.0
-        image: 
+      - name: nodejs-container 
+        image: 895072465878.dkr.ecr.us-east-2.amazonaws.com/devops-nodejs:1.01
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
