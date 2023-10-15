@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+  labels:
+    app: nodejs-webapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nodejs-webapp
+    spec:
+      containers:
+      - name: nodejs-container895072465878.dkr.ecr.us-east-1.amazonaws.com/devops-nodejs:1.0
+        image: 
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
